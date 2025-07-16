@@ -98,6 +98,35 @@ If you guys needs to setup a runner for this project, use the following command
 gitlab-runner register  --url http://gitlab.fake  --token glrt-7OE-fs4Fq-KUBE5qQ8h39G86MQpwOjEKdDozCnU6MQ8.01.17168vcp1
 ```
 
+#### 6. [Optional] Now if you ran [GitLeaks](https://github.com/gitleaks/gitleaks) on your sample repository, you might get an output like
+```bash
+gitleaks dir ./sample-repo-main --report-path report.json
+```
+```json
+[
+ {
+  "RuleID": "gitlab-runner-authentication-token",
+  "Description": "Discovered a GitLab Runner Authentication Token, posing a risk to CI/CD pipeline integrity and unauthorized access.",
+  "StartLine": 3,
+  "EndLine": 3,
+  "StartColumn": 58,
+  "EndColumn": 82,
+  "Match": "glrt-7OE-fs4Fq-KUBE5qQ8h39G86MQpwOjEKdDozCnU6MQ8.01.17168vcp1",
+  "Secret": "glrt-7OE-fs4Fq-KUBE5qQ8h39G86MQpwOjEKdDozCnU6MQ8.01.17168vcp1",
+  "File": "sample-repo-main/example/runner-setup.md",
+  "SymlinkFile": "",
+  "Commit": "",
+  "Entropy": 4.2936606,
+  "Author": "",
+  "Email": "",
+  "Date": "",
+  "Message": "",
+  "Tags": [],
+  "Fingerprint": "sample-repo-main/example/runner-setup.md:gitlab-runner-authentication-token:3"
+ }
+]
+```
+
 ---
 
 # Step 3: Test your runner
