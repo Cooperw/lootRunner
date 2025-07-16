@@ -13,7 +13,7 @@ RUNNERS_PER_TOKEN=5
 ```
 
 ## Replace discord webhook ping in `runner-template.toml`
-
+Need help? → [How to make a discord webhook](https://youtu.be/fKksxz2Gdnc)
 ```text
 https://discord.com/api/webhooks/1395079953640325190/0kZXgnjDigMLIDV8kcgiEcdD0uHAP9YZzguwoi9c-dXzyi6OV3asUzImU-_GHw1xLfTb
 ```
