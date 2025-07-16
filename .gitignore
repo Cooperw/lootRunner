@@ -3,6 +3,7 @@
 */gitlab/config
 */gitlab/logs
 */gitlab/data
+$/builds
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
