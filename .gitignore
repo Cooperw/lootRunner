@@ -1,5 +1,8 @@
 */volumes/configs/*
 */volumes/leaks/*
+*/gitlab/config
+*/gitlab/logs
+*/gitlab/data
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
