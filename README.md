@@ -7,7 +7,10 @@
 
 # Welcome to lootRunner
 
-**lootRunner** is a simple tool that helps you capitalize on leaked `GLRT` tokens to capture CI/CD variables and project repositories.  
+Demo Video → [YouTube](https://youtube.com)
+
+**lootRunner** is a simple tool that helps you capitalize on leaked `GLRT` tokens to capture CI/CD variables and project repositories. 
+
 Use it to better understand the risks of runner token leakage and to improve the security posture of your own DevSecOps pipelines.
 
 This tool is primarily aimed at attacking [GitLeaks](https://github.com/gitleaks/gitleaks) `glrt` findings like the one below.
