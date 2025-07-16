@@ -7,7 +7,7 @@
 
 # Welcome to lootRunner
 
-Demo Video → [YouTube](https://youtube.com)
+Demo Video → [YouTube](https://youtu.be/_062_8vR10Y)
 
 **lootRunner** is a simple tool that helps you capitalize on leaked `GLRT` tokens to capture CI/CD variables and project repositories. 
 

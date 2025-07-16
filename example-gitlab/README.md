@@ -175,6 +175,18 @@ Go to the pipeline editor, then click `Configure-Pipeline` and `Commit changes`
 http://gitlab.fake/root/sample-repo/-/ci/editor
 ```
 
+Paste the following as your `.gitlab.ci.yml`
+```yml
+stages:
+  - test
+
+prebuild-check:
+  stage: test
+  script:
+    - echo "Running job script..."
+    - git rev-parse HEAD
+```
+
 When the pipeline runs, it should pass and you should see your terminal full of logs about the job.
 
 ---
