@@ -1,0 +1,17 @@
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:latest
+    restart: always
+    hostname: 'gitlab.fake'
+    container_name: gitlab
+    ports:
+      - '80:80'      # Web UI
+      - '443:443'    # HTTPS (optional)
+      - '22:22'      # Git over SSH
+    volumes:
+      - ./gitlab/config:/etc/gitlab
+      - ./gitlab/logs:/var/log/gitlab
+      - ./gitlab/data:/var/opt/gitlab
+    shm_size: '256m'
+    environment:
+      - EXTERNAL_URL=http://gitlab.fake

